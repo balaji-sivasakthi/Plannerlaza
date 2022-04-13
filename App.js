@@ -1,31 +1,24 @@
 import { SafeAreaView } from "react-native-web";
-import { Home ,Profile} from "./screens";
+import { Home, Profile } from "./screens";
 import { NavigationContainer } from "@react-navigation/native";
-import {createNativeStackNavigator} from '@react-navigation/native-stack'
-const Stack = createNativeStackNavigator()
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-    
-        <Stack.Navigator>
-          <Stack.Screen
+      <Stack.Navigator>
+        <Stack.Screen
           name="Home"
           component={Home}
-        
-        options={{title:"Welcome"}}
-          >
-
-          </Stack.Screen>
-          <Stack.Screen
+          options={{ title: "Welcome",headerShown:false }}
+        ></Stack.Screen>
+        <Stack.Screen
           name="Profile"
           component={Profile}
-        options={{title:"Profile"}}
-         
-          >
-          </Stack.Screen>
-        </Stack.Navigator>
-      
+          options={{ title: "Profile" }}
+        ></Stack.Screen>
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }
