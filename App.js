@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  card{
+  card:{
     flex:2,
     backgroundColor:#fff,
   }
