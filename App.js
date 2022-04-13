@@ -22,6 +22,6 @@ const styles = StyleSheet.create({
   },
   card{
     flex:2,
-    backgroundColor:#f
+    backgroundColor:#fff,
   }
 });
