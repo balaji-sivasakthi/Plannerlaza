@@ -1,18 +1,18 @@
+import { View, Text,StyleSheet } from 'react-native'
 import React from 'react'
-import { StyleSheet, Text, View ,StatusBar, Button} from "react-native";
-import { colors,images } from '../theme';
+import { lightColor } from '../colors/LightTheme';
 
 
-const Home = ({navigation}) => {
+const Calender = () => {
   return (
     <View style={styles.container}>
-   <Text>Hi</Text>
+   
   </View>
   )
 }
 const styles = StyleSheet.create({
     container:{
-      backgroundColor:colors.backgroundColor,
+      backgroundColor:lightColor.backgroundColor,
         width: '100%',
         height: '100%',
         justifyContent:'center',
@@ -20,4 +20,4 @@ const styles = StyleSheet.create({
     }
   });
 
-export default Home
+export default Calender
