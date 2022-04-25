@@ -1,6 +1,6 @@
 import { View, Text,StyleSheet } from 'react-native'
 import React from 'react'
-import { lightColor } from '../colors/LightTheme';
+import { colors } from '../theme';
 
 
 const Calender = () => {
@@ -12,7 +12,7 @@ const Calender = () => {
 }
 const styles = StyleSheet.create({
     container:{
-      backgroundColor:lightColor.backgroundColor,
+      backgroundColor:colors.backgroundColor,
         width: '100%',
         height: '100%',
         justifyContent:'center',
