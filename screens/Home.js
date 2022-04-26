@@ -6,13 +6,11 @@ import {
   StatusBar,
   Button,
   ScrollView,
+  
 } from "react-native";
+import { Col, Row, Grid } from "react-native-easy-grid";
 import { colors, images } from "../theme";
 import CircularProgress from "react-native-circular-progress-indicator";
-import {
-  backgroundColor,
-  borderColor,
-} from "react-native/Libraries/Components/View/ReactNativeStyleAttributes";
 import Icon from "react-native-vector-icons/FontAwesome";
 
 const myIcon = <Icon name="bell-o" size={20} color="#000" />;
@@ -27,7 +25,7 @@ const Home = ({ navigation }) => {
         <View style={styles.notification}>{myIcon}</View>
         <View style={styles.welcome}>
           <Text style={{ fontSize: 18, color: "#959595", textAlign: "right" }}>
-            Good Morning,+
+            Good Morning,
           </Text>
           <Text style={{ fontSize: 16, color: "#000", textAlign: "right" }}>
             {name}
@@ -56,39 +54,11 @@ const Home = ({ navigation }) => {
           />
         </View>
         <Text style={{ fontSize: 24, marginTop: 10 }}>Today's Schedule</Text>
-        <ScrollView contentContainerStyle={{flexGrow: 1 }}>
-          <View style={styles.dicover}>
-            <View style={styles.grid}>
-              <View style={styles.box}>
-                <Text>Meeting Preparation</Text>
-                <Text>15.00-15.30</Text>
-              </View>
-              <View style={styles.box2}>
-                <Text>Attendance On Online Course</Text>
-                <Text>15.00-15.30</Text>
-              </View>
-            </View>
-            <View style={styles.grid}>
-              <View style={styles.box2}>
-                <Text>Meeting Preparation</Text>
-                <Text>15.00-15.30</Text>
-              </View>
-              <View style={styles.box}>
-                <Text>Attendance On Online Course</Text>
-                <Text>15.00-15.30</Text>
-              </View>
-              <View style={styles.box}>
-                <Text>Attendance On Online Course</Text>
-                <Text>15.00-15.30</Text>
-              </View>
-                <View style={styles.box}>
-                <Text>Attendance On Online Course</Text>
-                <Text>15.00-15.30</Text>
-              </View>
-            </View>
-            
-          </View>
-          
+        <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
+        <Grid>
+    <Col></Col>
+    <Col></Col>
+</Grid>
         </ScrollView>
       </View>
     </View>
@@ -136,37 +106,22 @@ const styles = StyleSheet.create({
     padding: 10,
     flexDirection: "row",
     alignItems: "center",
+
     justifyContent: "space-between",
   },
   dicover: {
+    backgroundColor: "#00ff00",
     marginTop: 10,
     height: "100%",
     width: "100%",
     flexDirection: "row",
-    justifyContent: "space-around",
+    
   },
-  grid: {
-    width: "45%",
-    height: "60%",
-  },
-  box: {
-    margin: 10,
-    width: "100%",
-    height: "30%",
-    borderRadius: 20,
-    backgroundColor: colors.whiteColor,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  box2: {
-    margin: 10,
-    width: "100%",
-    height: "60%",
-    borderRadius: 20,
-    backgroundColor: colors.whiteColor,
-    justifyContent: "center",
-    alignItems: "center",
-  },
+  largeBox:{
+    width:"50%",
+    height:"60%",
+    backgroundColor:"#fff"
+  }
 });
 
 export default Home;
