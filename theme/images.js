@@ -3,4 +3,5 @@ export default Images ={
    task:require('../assets/icons/Task.png'),
    calendar:require('../assets/icons/Calendar.png'),
    profile:require('../assets/icons/User.png'),
+   profileImg:require('../assets/images/profileImg.png')
 }
