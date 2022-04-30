@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     height: "100%",
     borderWidth: 2,
     borderRadius: 100,
-    borderColor: "#E5E5E5",
+    borderColor: colors.secondaryColor,
   },
   cardText: {
     width: "70%",
